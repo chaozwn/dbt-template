@@ -1,9 +1,13 @@
-name: 'jaffle_shop'
+name: "jaffle_shop"
 
 config-version: 2
-version: '0.1'
+version: "0.1"
 
-profile: 'jaffle_shop'
+profile: "jaffle_shop"
+
+vars:
+  url: jdbc:sqlite:./database/main.db
+  driver: org.sqlite.JDBC
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
@@ -13,25 +17,31 @@ macro-paths: ["macros"]
 
 target-path: "target"
 clean-targets:
-    - "target"
-    - "dbt_modules"
-    - "logs"
+  - "target"
+  - "dbt_modules"
+  - "logs"
 
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
   jaffle_shop:
+    materialized: table
+    +file_format: jdbc
+
+    staging:
+      materialized: view
+
+    sources:
       materialized: table
-      +file_format: delta
-      staging:
-        materialized: view
 
 seeds:
-  +file_format: delta # or iceberg or hudi
+  jaffle_shop:
+    +file_format: delta
+    # +options:
+    #   url: "{{ var('url', 'jdbc:sqlite:./database/main.db') }}"
+    #   driver: "{{ var('driver', 'org.sqlite.JDBC') }}"
+    # dbtable: "main.{{ var('model.name', 'undefined') }}"
 
 snapshots:
-  +file_format: delta # or iceberg or hudi
-    
-        
-
-      
+  # +file_format: delta # or iceberg or hudi
+  +file_format: delta

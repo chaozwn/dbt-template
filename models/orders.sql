@@ -1,3 +1,5 @@
+{{ config(options=generate_jdbc_options()) }}
+
 {% set payment_methods = ["credit_card", "coupon", "bank_transfer", "gift_card"] %}
 
 with

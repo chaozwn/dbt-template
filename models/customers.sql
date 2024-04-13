@@ -1,3 +1,5 @@
+{{ config(options=generate_jdbc_options()) }}
+
 with
     customers as (select * from {{ ref("stg_customers") }}),
 

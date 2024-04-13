@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: sqlite
+    tables:
+      - name: raw_jayce
+        external:
+          using: jdbc
+          options:
+            url: "{{ var('url') }}"
+            driver: "{{ var('driver') }}"
+            dbtable: "main.raw_jayce"

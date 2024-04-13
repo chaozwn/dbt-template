@@ -1,5 +1,5 @@
 {{ config(options=generate_jdbc_options()) }}
 
-with person as (select * from {{ ref("stg_person") }})
+with person as (select * from {{ source("sqlite", "raw_jayce") }})
 select *
 from person

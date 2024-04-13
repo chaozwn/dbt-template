@@ -1,8 +1,8 @@
 ----------------------------------------------------------------
-Sat Apr 13 12:30:34 CST 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-018e-d5b8-ade9-0000bbaf6968 
-on database directory /Users/zhaown/workspace/dbt_project/jaffle_shop/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@77330bc1 
-Loaded from file:/Users/zhaown/miniconda3/envs/python310/lib/python3.10/site-packages/pyspark/jars/derby-10.14.2.0.jar
+Sun Apr 14 02:06:37 CST 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-018e-d8a3-cbc0-0000bc66b460 
+on database directory /Users/zhaown/workspace/dbt_project/jaffle_shop/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@74f3a459 
+Loaded from file:/Users/zhaown/miniconda3/envs/dbt/lib/python3.10/site-packages/pyspark/jars/derby-10.14.2.0.jar
 java.vendor=Amazon.com Inc.
 java.runtime.version=1.8.0_382-b05
 user.dir=/Users/zhaown/workspace/dbt_project/jaffle_shop

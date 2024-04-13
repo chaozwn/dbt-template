@@ -3,4 +3,6 @@ packages:
   version: 1.1.1
 - package: dbt-labs/spark_utils
   version: 0.3.0
-sha1_hash: 64a5a7224b520a4b805e7ace9e667d01602e358a
+- package: dbt-labs/dbt_external_tables
+  version: 0.8.7
+sha1_hash: 279f9d37d235c87090dbc222336b107776fa72ec
