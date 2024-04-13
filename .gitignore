@@ -3,3 +3,9 @@ target/
 dbt_modules/
 logs/
 **/.DS_Store
+metastore_db
+database
+spark-warehouse
+dbt_packages
+.dbt_plugin
+.idea

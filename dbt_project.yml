@@ -22,5 +22,16 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 models:
   jaffle_shop:
       materialized: table
+      +file_format: delta
       staging:
         materialized: view
+
+seeds:
+  +file_format: delta # or iceberg or hudi
+
+snapshots:
+  +file_format: delta # or iceberg or hudi
+    
+        
+
+      
