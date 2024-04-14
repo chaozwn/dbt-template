@@ -1,0 +1,26 @@
+jaffle_shop:
+  target: spark
+  outputs:
+    spark:
+      type: spark
+      method: session
+      schema: default
+      host: NA
+
+      server_side_parameters:
+        "spark.driver.memory": "20g"
+        "spark.jars.packages": "io.delta:delta-core_2.12:2.4.0,org.xerial:sqlite-jdbc:3.45.2.0,org.duckdb:duckdb_jdbc:0.10.1"
+        "spark.sql.extensions": "io.delta.sql.DeltaSparkSessionExtension"
+        "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.delta.catalog.DeltaCatalog"
+        "spark.sql.debug.maxToStringFields": "100"
+        "spark.sql.sources.partitionOverwriteMode": "DYNAMIC"
+
+    sqlite:
+      type: sqlite
+      host: NA
+      threads: 1
+      database: "database"
+      schema: "main"
+      schemas_and_paths:
+        main: "/Users/zhaown/workspace/dbt_project/jaffle_shop/database/main.db"
+      schema_directory: "/Users/zhaown/workspace/dbt_project/jaffle_shop/database"
