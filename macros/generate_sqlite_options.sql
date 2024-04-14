@@ -2,7 +2,7 @@
     {{
         return(
             {
-                "url": var("url", "jdbc:sqlite:./database/main.db"),
+                "url": var("url"),
                 "driver": "org.sqlite.JDBC",
                 "dbtable": "main." ~ this.name,
             }

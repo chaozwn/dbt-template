@@ -8,6 +8,8 @@ profile: "jaffle_shop"
 vars:
   url: jdbc:sqlite:./database/main.db
   driver: org.sqlite.JDBC
+  data_path: ./datas
+  duckdb_url: jdbc:duckdb:database/duckdb.db
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
@@ -32,6 +34,9 @@ models:
       materialized: view
 
     sources:
+      materialized: table
+
+    ads:
       materialized: table
 
 seeds:
